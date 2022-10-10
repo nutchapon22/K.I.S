@@ -1,6 +1,10 @@
 <?php
     include("conect.php");
     session_start();
+    if(empty($_SESSION['id']))
+    {
+        header("location: login.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

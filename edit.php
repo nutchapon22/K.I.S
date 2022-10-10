@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if(empty($_SESSION['id']))
+    {
+        header("location: login.php");
+    }
     $idp = $_GET['idp'];
     include("conect.php");
     $idd = $_SESSION['id'];
